@@ -145,7 +145,7 @@ hr {
 
 /* Main Page */
 .main-page {
-  margin: 2rem 2.5rem 0 6rem;
+  margin: 2rem 2.5rem 0 8rem;
   
   min-height: 100vh;
   display: flex;
@@ -166,10 +166,11 @@ hr {
 
 .info-container {
   position: relative;
-  width: 80%;
+  width: 75%;
   padding: 1rem;
   border: 2px solid #dbe3f0;
   border-radius: 20px;
+  
 
 }
 
@@ -198,13 +199,14 @@ hr {
   font-weight: 700;
   color: #f5f7fa;
   margin-bottom: 5px;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .user-details h1 {
   width: fit-content;
   height: fit-content;
   line-height: 2rem;
+  font-size: 36px;
 }
 
 
@@ -273,11 +275,13 @@ hr {
 .courses-box {
   display: flex;
   gap: 20px;
+ 
 }
 
 .courses-box img {
-  width: 120px;
+  width: 190px;
   border-radius: 20px;
+  
 }
 
 
