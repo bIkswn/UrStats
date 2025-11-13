@@ -1,4 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --bg-dark: hsl(218 59% 91%); /* #dce6f5 */
+  --bg: hsl(218 100% 96%); /* #eaf2ff */
+  --bg-light: hsl(218 100% 100%); /* #ffffff */
+  --text: hsl(225 88% 7%); /* #05081a */
+  --text-muted: hsl(219 27% 31%); /* #44536a */
+  --highlight: hsl(218 100% 100%); /* #ffffff */
+  --border: hsl(218 20% 53%); /* #8190a3 */
+  --border-muted: hsl(218 27% 65%); /* #a3b3cb */
+  --primary: hsl(219 51% 32%); /* #2c4574 */
+  --secondary: hsl(138, 29%, 31%); /* #396747 */
+  --danger: hsl(9 21% 41%); /* #6d5753 */
+  --warning: hsl(52 23% 34%); /* #6c664a */
+  --success: hsl(147 19% 36%); /* #55665f */
+  --info: hsl(217 22% 41%); /* #5a6474 */
+}
+
 
 
 :root {
@@ -335,4 +352,4 @@ border-radius: 20px;
     flex-direction: row;
     margin-left: auto;
   }
-}git remote add upstream 
+}
