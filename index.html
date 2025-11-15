@@ -5,70 +5,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UrStats - AI Analytics Profile</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
+<!-- /hi -->
+
 <body>
 
-  <nav class="sidebar">
 
+
+  <!-- SideBar -->
+  <nav class="sidebar">
     <div class="sidebar-top">
       <div class="nav-logo">
         <img src="/assets/Side Bar/urs logo.jpg" alt="" class="urs-logo" />
       </div>
-    </div>
 
-    <div class="sidebar-nav">
-      <a href="#home" class="sidebar-link"><i class="fas fa-home"></i><span class="home-text">Home</span></a>
-      <a href="#features" class="sidebar-link"><i class="fas fa-list"></i><span class="feat-text">features</span></a>
-      <a href="#dashboard" class="sidebar-link"><i class="fas fa-tachometer-alt"></i><span
-          class="dash-text">dashboards</span></a>
-      <a href="#log" class="sidebar-link"><i class="fa-solid fa-plus"></i><span
-          class="contacts-text">Log/Review</span></a>
-    </div>
+      <div class="sidebar-nav">
+        <a href="#home" class="sidebar-link"
+          ><i class="fas fa-home"></i><span class="home-text">Home</span></a
+        >
+        <a href="#features" class="sidebar-link"
+          ><i class="fas fa-list"></i><span class="feat-text">Features</span></a
+        >
+        <a href="#dashboard" class="sidebar-link"
+          ><i class="fas fa-tachometer-alt"></i
+          ><span class="dash-text">Dashboards</span></a
+        >
+        <a href="#log" class="sidebar-link"
+          ><i class="fa-solid fa-plus"></i
+          ><span class="contacts-text">Log/Review</span></a
+        >
+      </div>
 
-    <div class="sidebar-auth">
-      <a href="#settings" class="nav-settings"><i class="fa-solid fa-bars"></i><span
-          class="settings-text">Settings</span></a>
-    </div>
-  </nav>
+      <div class="sidebar-auth">
+        <a href="#settings" class="nav-settings"
+          ><i class="fa-solid fa-bars"></i
+          ><span class="settings-text">Settings</span></a
+        >
+      </div>
+    </nav>
 
+    <section class="main-page">
+      <div class="info-container">
+        <div class="user-info">
+          <img
+            src="assets/MAIN PAGE/Sample profile.png"
+            alt=""
+            class="sample-profile"
+          />
 
-  <section class="main-page">
+          <div class="user-details">
+            <h1>Username</h1>
+            <p>TIPA</p>
 
-    <div class="info-container">
+            <textarea
+              class="user-input"
+              rows="2"
+              placeholder="Enter bio..."
+            ></textarea>
+          </div>
+        </div>
 
-      <div class="user-info">
-        <img src="assets/MAIN PAGE/Sample profile.png" alt="" class="sample-profile">
+        <div class="user-stats">
+          <p>Statistics</p>
+        </div>
 
-        <div class="user-details">
-          <h1>Username</h1>
-          <p>TIPA</p>
-          <textarea class="user-input" rows="2" placeholder="Enter bio..."></textarea>
+        <div class="user-courses">
+          <h3>Courses Enrolled</h3>
+
+          <div class="div-line"></div>
+          <div class="courses-box">
+            <img src="assets/MAIN PAGE/sample book 1.png" alt="" />
+            <img src="assets/MAIN PAGE/Sample Book 2.png" alt="" />
+            <img src="assets/MAIN PAGE/sample book 3.png" alt="" />
+            <div class="add-course">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="user-stats">
-        <h3>Statistics</h3>
+    </div>
+
+    <div class="side-chix">
+      <div class="recent-log-container">
+        <p>RECENT LOG</p>
+        <div class="recent-log-box">
+          <div class="log-item">
+            <div class="log-icon">
+              <img src="assets/MAIN PAGE/Sample profile.png" alt="" />
+            </div>
+            <div class="log-content">
+              <div class="log-header">
+                <h4>Math</h4>
+                <div class="log-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <button class="log-favorite">
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="log-meta">
+                <span class="log-date">Nov. 13, 2024</span>
+                <span class="log-desc">omg ka</span>
+              </div>
+            </div>
+          </div>
+          <div class="log-item">
+            <div class="log-icon">
+              <img src="assets/MAIN PAGE/Sample profile.png" alt="" />
+            </div>
+            <div class="log-content">
+              <div class="log-header">
+                <h4>Education</h4>
+                <div class="log-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <button class="log-favorite">
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="log-meta">
+                <span class="log-date">Nov. 13, 2024</span>
+                <span class="log-desc">omg ka</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="user-courses">
-
-        <h3>Courses</h3>
-
-        <div class="div-line">
-          
+        <div class="friends">
+          <p>FRIENDS</p>
+          <div class="div-line"></div>
+          <div class="friend-profiles">
+            <img src="assets/MAIN PAGE/Sample profile.png" alt="" />
+            <img src="assets/MAIN PAGE/Sample profile.png" alt="" />
+            <img src="assets/MAIN PAGE/Sample profile.png" alt="" />
+          </div>
         </div>
-        <div class="courses-box">
-          <img src="assets/MAIN PAGE/sample book 1.png" alt="">
-          <img src="assets/MAIN PAGE/Sample Book 2.png" alt="">
-          <img src="assets/MAIN PAGE/sample book 3.png" alt="">
-        </div>
+
 
 
       </div>
 
+      <div class="goals">
+        <p>GOALS</p>
+        <div class="sdiv-line"></div>
+
+      </div>
+      
     </div>
 
   </section>
