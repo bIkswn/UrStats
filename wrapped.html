@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrStats Wrapped 2024-2025</title>
+  <link rel="stylesheet" href="wrapped.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="blob-bg blob-1"></div>
+  <div class="blob-bg blob-2"></div>
+  <div class="blob-bg blob-3"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-chart-line"></i>
+        <span>UrStats Wrapped</span>
+      </div>
+      <div class="nav-buttons">
+        <a href="#final" class="btn-nav">Share</a>
+        <a href="#" class="btn-nav btn-nav-primary" onclick="window.print(); return false;">Print</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="wrapped-container">
+    
+    <!-- Slide 1: Cover -->
+    <section class="slide slide-1">
+      <div class="slide-content">
+        <div class="wrapped-logo">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h1 class="slide-title">Your 2024-2025</h1>
+        <p class="slide-subtitle">School Year in Review</p>
+        <a href="#slide-2" class="btn-start">Explore Your Stats <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Slide 2: Top Stats -->
+    <section class="slide slide-2" id="slide-2">
+      <div class="slide-content">
+        <h2>Your Top Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <p class="stat-number">42</p>
+            <p class="stat-label">Classes Attended</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="stat-number">3.85</p>
+            <p class="stat-label">GPA</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <p class="stat-number">8</p>
+            <p class="stat-label">Assignments Aced</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <p class="stat-number">156</p>
+            <p class="stat-label">Study Hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Performance Chart -->
+    <section class="slide slide-3">
+      <div class="slide-content">
+        <h2>Your Performance</h2>
+        <div class="chart-container">
+          <div class="chart-bar">
+            <div class="bar-label">Math</div>
+            <div class="bar-wrapper">
+              <div class="bar" style="width: 95%; background: linear-gradient(90deg, #ff6b6b, #ff8e8e);"></div>
+            </div>
+            <div class="bar-value">95%</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar-label">Science</div>
+            <div class="bar-wrapper">
+              <div class="bar" style="width: 88%; background: linear-gradient(90deg, #4ecdc4, #7dd4d1);"></div>
+            </div>
+            <div class="bar-value">88%</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar-label">English</div>
+            <div class="bar-wrapper">
+              <div class="bar" style="width: 92%; background: linear-gradient(90deg, #ffd93d, #ffe066);"></div>
+            </div>
+            <div class="bar-value">92%</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar-label">History</div>
+            <div class="bar-wrapper">
+              <div class="bar" style="width: 85%; background: linear-gradient(90deg, #a8d8ea, #c5e5f3);"></div>
+            </div>
+            <div class="bar-value">85%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Highlights -->
+    <section class="slide slide-4">
+      <div class="slide-content">
+        <h2>Year Highlights</h2>
+        <div class="highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3>Longest Streak</h3>
+            <p>42 days of consistent studying</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Peak Performance</h3>
+            <p>Scored highest in December</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Favorite Subject</h3>
+            <p>Mathematics - 95% average</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Activities -->
+    <section class="slide slide-5">
+      <div class="slide-content">
+        <h2>What You Did Most</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <span class="activity-rank">1st</span>
+            <div class="activity-info">
+              <p class="activity-name">Completed Assignments</p>
+              <p class="activity-count">234 assignments</p>
+            </div>
+            <div class="activity-bar">
+              <div class="activity-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-rank">2nd</span>
+            <div class="activity-info">
+              <p class="activity-name">Class Participation</p>
+              <p class="activity-count">189 times</p>
+            </div>
+            <div class="activity-bar">
+              <div class="activity-fill" style="width: 81%;"></div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-rank">3rd</span>
+            <div class="activity-info">
+              <p class="activity-name">Group Projects</p>
+              <p class="activity-count">28 projects</p>
+            </div>
+            <div class="activity-bar">
+              <div class="activity-fill" style="width: 45%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Goals -->
+    <section class="slide slide-6">
+      <div class="slide-content">
+        <h2>2025-2026 Goals</h2>
+        <div class="goals-container">
+          <div class="goal-item">
+            <input type="checkbox" id="goal1" />
+            <label for="goal1">Maintain 4.0 GPA</label>
+          </div>
+          <div class="goal-item">
+            <input type="checkbox" id="goal2" />
+            <label for="goal2">Join 2 new clubs</label>
+          </div>
+          <div class="goal-item">
+            <input type="checkbox" id="goal3" />
+            <label for="goal3">Improve public speaking skills</label>
+          </div>
+          <div class="goal-item">
+            <input type="checkbox" id="goal4" />
+            <label for="goal4">Volunteer 40+ hours</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Final -->
+    <section class="slide slide-7" id="final">
+      <div class="slide-content">
+        <div class="final-message">
+          <h1>Here's to Your Success!</h1>
+          <p>You've had an incredible year. Keep pushing forward!</p>
+          <div class="final-buttons">
+            <a href="#slide-1" class="btn-final">Back to Top</a>
+            <a href="mailto:?subject=Check%20out%20my%20UrStats%20Wrapped!&body=Check%20out%20my%20UrStats%20Wrapped%202024-2025!" class="btn-final btn-final-secondary">Share via Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 UrStats. Your School Year, Visualized.</p>
+  </footer>
+</body>
+</html>

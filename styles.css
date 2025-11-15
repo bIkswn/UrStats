@@ -286,7 +286,7 @@ hr {
 }
 
 .recent-log-box {
-  background-color: #ffffff;
+  background-color: var(--border-muted);
   width: 100%;
   height: 290px;
   border-radius: 5px;
@@ -375,6 +375,9 @@ hr {
     position: absolute;
     left: 4rem;
     bottom: 1.5rem;
+    background: rgba(0, 102, 204, 0.1);
+    padding: 0 0.75rem;
+    border-radius: 8px;
   }
 
   .sidebar-nav a:first-child:hover .home-text {
@@ -493,6 +496,7 @@ hr {
 
   .recent-log-container {
     width: 40%;
+
   }
 
   .friends {
@@ -530,6 +534,7 @@ hr {
 
   .recent-log-box {
     height: 155px;
+
   }
 
   .user-details h1 {
