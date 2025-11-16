@@ -61,7 +61,8 @@
   top: 0;
   height: 100vh;
   width: 85px;
-  border-radius : 0 15px 15px 0;
+  border-radius: 0 15px 15px 0;
+
   background: rgba(187, 187, 187, 0.8);
   backdrop-filter: blur(8px);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
@@ -71,8 +72,6 @@
   padding: 1.5rem 1rem;
   z-index: 200;
   box-shadow: 8px 0 30px rgba(0, 0, 0, 0.04);
-  overflow-y: auto;
-  overscroll-behavior: contain;
 }
 
 .sidebar .nav-logo {
@@ -93,6 +92,8 @@
 .sidebar-nav {
   display: flex;
   flex-direction: column;
+
+
   align-items: center;
 }
 
@@ -453,9 +454,10 @@ hr {
 .log-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.log-header h4 {
+.log-content h4 {
   margin: 0 0 0.25rem 0;
   font-size: 0.98rem;
   font-weight: 700;
@@ -477,7 +479,7 @@ hr {
   gap: 0.15rem;
   align-items: center;
   color: var(--secondary);
-  margin-left: auto;
+  flex: 0 0 auto;
 }
 
 .log-favorite {
@@ -493,7 +495,16 @@ hr {
   cursor: pointer;
   margin: 0;
   /* remove left margin */
-} 
+}
+
+/* wrapper that ensures rating and favorite sit on the same row and align to the right */
+.log-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
 
 .log-favorite:hover {
   background: rgba(255, 107, 107, 0.08);
@@ -560,16 +571,15 @@ footer {
   background: #BBBBBB;
   margin: 5rem 0 0 0;
   font-family: var(--mainFont);
-  width: 100%;
-  overflow-x: hidden;
+
 }
 
 .footer-box {
-  padding: 2rem 1rem 2rem 2rem;
+  padding: 2rem 0 2rem 7rem;
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
 }
 
 .first-column {
@@ -634,14 +644,14 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  flex: 1;
-  min-width: 150px;
 }
 
 .sLinks {
   display: flex;
   flex-direction: column;
 }
+
+
 
 .lLinks {
   display: flex;
@@ -661,17 +671,11 @@ footer {
   font-size: 16px;
   color: var(--text-muted);
   font-weight: 500;
-  transition: color 0.2s;
-}
-
-.second-column a:hover {
-  color: #333;
 }
 
 .copyright {
   background-color: #D9D9D9;
-  padding: 0.5rem 1rem;
-  width: 100%;
+  padding: .2rem;
 }
 
 .copyright p {
@@ -873,7 +877,7 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
 }
 
-/* .scv-achievements {} */
+.scv-achievements {}
 
 .notes-box {
   position: relative;
@@ -978,7 +982,7 @@ footer {
 
 @media (max-width:1680px) {
   .main-page {
-    margin: 2rem 5rem 0 10rem;
+    margin: 2rem 5.5rem 0 12rem;
   }
 
   .main-scv-sec {
@@ -1003,20 +1007,9 @@ footer {
     font-size: 17px;
   }
 
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; /* center children horizontally */
-    padding: 1rem 1.25rem;
-    gap: 1rem;
-    border-right: none;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    border-radius: 0 0 15px 15px;
-    margin: 0 auto;
+  .log-type {
+    width: fit-content;
+    height: 20px;
   }
 
   .logstars img {
@@ -1490,34 +1483,12 @@ footer {
   .second-column {
     width: 80%;
   }
-
-  .footer-box {
-    padding: 1.5rem 2.5rem;
-    gap: 1rem;
-  }
-
-  .first-column {
-    min-width: 200px;
-  }
-
-  .second-column {
-    gap: 1.5rem;
-  }
-
-  .smTitle,
-  .liTitle {
-    font-size: 16px;
-    margin-top: 0.8rem;
-  }
-
-  .second-column a {
-    font-size: 14px;
-  }
 }
 
 @media (max-width:680px) {
   .main-page {
     flex-direction: column;
+
     margin: 2rem 1.5rem 0 1.5rem;
   }
 
@@ -1531,21 +1502,20 @@ footer {
   }
 
   .side-chix {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-    gap: 1rem;
   }
 
   .recent-log-container {
-    width: 100%;
+    width: 40%;
   }
 
   .friends {
-    width: 100%;
+    width: 25%;
   }
 
   .goals {
-    width: 100%;
+    width: 25%;
   }
 
   .copyright p {
@@ -1558,61 +1528,28 @@ footer {
 
 }
 
-  .recent-log-box {
-    height: 250px;
-  }
-
-  .log-item {
-    padding: 0.5rem 0.3rem;
-    gap: 0.6rem;
-  }
-
-  .log-icon {
-    width: 48px;
-    height: 48px;
-    flex: 0 0 48px;
-  }
-
-  .log-content h4 {
-    font-size: 0.9rem;
-  }
-
-  .log-meta {
-    font-size: 0.7rem;
-  }
-
-  .log-rating {
-    font-size: 0.7rem;
-  }
-
-  .copyright {
-    padding: 0.5rem;
-  }
-
-  .copyright p {
-    font-size: 14px;
-  }
-}
-
 @media (max-width:590px) {
+
   .sidebar-nav {
-    gap: 0.3rem;
+    gap: .2rem;
+    border: 1px solid black;
+    border-radius: 20px;
   }
 
   .sidebar-nav img {
     width: 40px;
     height: 40px;
+
   }
 
   .side-chix {
     flex-direction: column;
-    gap: 1rem;
   }
 
   .recent-log-container,
   .friends,
   .goals {
-    width: 100%;
+    width: auto;
   }
 
   .sample-profile {
@@ -1622,45 +1559,18 @@ footer {
   }
 
   .user-info {
-    gap: 0.9rem;
+    gap: .9rem;
     flex-direction: column;
+
+
   }
 
   .recent-log-box {
-    height: 200px;
-  }
-
-  .log-item {
-    padding: 0.4rem 0.25rem;
-    gap: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
-  }
-
-  .log-icon {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-  }
-
-  .log-content h4 {
-    font-size: 0.85rem;
-    margin-bottom: 0.15rem;
-  }
-
-  .log-desc {
-    font-size: 0.8rem;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-  }
-
-  .log-actions {
-    margin-left: 0.25rem;
-    gap: 0.25rem;
+    height: 155px;
   }
 
   .user-details h1 {
     margin: 0 auto;
-    font-size: 1.8rem;
   }
 
   .main-page {
@@ -1731,20 +1641,22 @@ footer {
 
 @media (max-width:475px) {
 
-      .mbook-abt h3 {
-        font-size: 26px;
-    }
+  .mbook-abt h3 {
+    font-size: 26px;
+  }
 
-    .mbook-abt p {
-        font-size: 10px;
-    }
-  .scv-sample-book{
+  .mbook-abt p {
+    font-size: 13px;
+  }
+
+  .scv-sample-book {
     width: 130px;
   }
-  .mbook-description
-  {
+
+  .mbook-description {
     font-size: 14px;
   }
+
   .l1-left h3 {
     font-size: 14px;
   }
@@ -1768,145 +1680,14 @@ footer {
   }
 }
 
-  .recent-log-box {
-    height: 180px;
-    padding: 0.4rem;
-  }
-
-  .log-item {
-    padding: 0.35rem 0.2rem;
-  }
-
-  .log-icon {
-    width: 40px;
-    height: 40px;
-    flex: 0 0 40px;
-  }
-
-  .log-content h4 {
-    font-size: 0.8rem;
-  }
-
-  .log-favorite {
-    width: 30px;
-    height: 30px;
-  }
-
-  .user-details h1 {
-    font-size: 1.5rem;
-  }
-
-  .courses-box {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-  }
-
-  .friend-profiles img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .footer-box {
-    padding: 0.75rem 1rem;
-  }
-
-  .footer-titles p {
-    font-size: 16px;
-  }
-
-  .smTitle,
-  .liTitle {
-    font-size: 12px;
-  }
-}
-
 
 @media (max-width: 420px) {
   .courses-box {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-  }
-
-  .recent-log-container p {
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .recent-log-box {
-    height: 160px;
-  }
-
-  .log-item {
-    padding: 0.3rem 0.15rem;
-    gap: 0.4rem;
-  }
-
-  .log-content h4 {
-    font-size: 0.75rem;
-  }
-
-  .log-meta {
-    display: none;
-  }
-
-  .log-desc {
-    display: none;
-  }
-
-  .footer-box {
-    flex-direction: column;
-    padding: 0.75rem 1rem;
-  }
-
-  .second-column {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .footer-section {
-    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
   }
 }
 
-@media (max-width:375px) {
-  .main-page {
-    margin: 1rem 0.5rem 0 0.5rem;
-  }
+@media (max-width:375px) {}
 
-  .user-details h1 {
-    font-size: 1.3rem;
-  }
-
-  .recent-log-box {
-    height: 140px;
-  }
-
-  .log-icon {
-    width: 36px;
-    height: 36px;
-    flex: 0 0 36px;
-  }
-}
-
-@media (max-width:320px) {
-  .sidebar {
-    padding: 0.75rem 0.5rem;
-  }
-
-  .main-page {
-    margin: 0.75rem 0.4rem 0 0.4rem;
-  }
-
-  .recent-log-box {
-    height: 120px;
-  }
-
-  .log-item {
-    padding: 0.25rem 0.1rem;
-  }
-
-  .courses-box {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-  }
-}
+@media (max-width:320px) {}
