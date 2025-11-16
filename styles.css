@@ -431,14 +431,13 @@ background: #EAF2FF;
 .log-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .log-header h4 {
   margin: 0 0 0.25rem 0;
   font-size: 0.98rem;
   font-weight: 700;
-  color: #102a43;;
+  color: #102a43;
 }
 
 .log-meta {
@@ -456,6 +455,7 @@ background: #EAF2FF;
   gap: 0.15rem;
   align-items: center;
   color: var(--secondary);
+  margin-left: auto;
 }
 
 .log-favorite {
