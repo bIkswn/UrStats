@@ -70,9 +70,41 @@
   box-shadow: 8px 0 30px rgba(0, 0, 0, 0.04);
 }
 
+.home-text,
+.courses-text,
+.feed-text,
+.placeholder-text {
+  display: none;
+  position: absolute;
+  left: 5rem;
+  color: var(--text);
+  font-size: 20px;
+  padding: .1rem 1rem;
+  background: var(--bg-light);
+  border-radius: 20px;
+  border: var(--text) 1px solid;
+}
+
+.settings-text {
+    display: none;
+  position: absolute;
+  left: 5rem;
+  color: var(--text);
+  font-size: 20px;
+  padding: .1rem 1rem;
+  background: var(--bg-light);
+  border-radius: 20px;
+  border: var(--text) 1px solid;
+  bottom: 2.4rem;
+}
+
+
+
 .mobile-navbar {
   display: none;
 }
+
+
 
 .sidebar .nav-logo {
   font-size: 1.25rem;
@@ -203,6 +235,7 @@ hr {
   display: flex;
   justify-content: space-around;
 }
+
 .info-container::before {
   content: "";
   position: absolute;
@@ -297,11 +330,13 @@ hr {
   color: #000000;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
-.stat-item img{
+
+.stat-item img {
   height: 15rem;
   width: 15rem;
 
 }
+
 /* Courses */
 .user-courses p {
   font-size: 25px;
@@ -1134,10 +1169,14 @@ footer {
   flex-direction: column;
 }
 
-.add-sec-box {
+.add-head-box {
   display: flex;
   gap: 1rem;
 
+}
+
+.madd-head-box {
+  display: none;
 }
 
 
@@ -1228,8 +1267,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 0 2rem 2rem 2rem;
-  
+  padding: 0 5rem 2rem 5rem;
+
 }
 
 
@@ -1247,7 +1286,7 @@ footer {
 }
 
 .img-option {
-  padding: 1rem;
+  padding: .6rem;
   background-color: rgba(0, 0, 0, 0.689);
   width: fit-content;
   display: none;
@@ -1255,15 +1294,29 @@ footer {
   border-radius: 7px;
   position: absolute;
   bottom: 1rem;
-  left: 1.5rem;
-  
+  left: 50%;
+  transform: translateX(-50%);
+
 }
+
+.img-option img {
+  width: fit-content;
+  height: 20px;
+}
+
 .book1 {
   position: relative;
 }
-.book1:hover .img-option  {
-display: flex;
 
+.book1:hover .img-option {
+  display: flex;
+
+}
+
+
+.book1:has(.img-option:hover) .first-sem-book,
+.book1.img-option-hover .first-sem-book {
+  filter: brightness(0.5);
 }
 
 
@@ -1288,7 +1341,7 @@ display: flex;
 .cs-first-sem {
   position: relative;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 44px;
   background: #eaf2ff;
   display: flex;
@@ -1302,7 +1355,7 @@ display: flex;
   top: 0px;
   left: 1;
   right: 0;
-  height: 40px;
+  height: 20px;
   width: 99%;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -1320,34 +1373,9 @@ display: flex;
 
 
 
-  .home-text,
-  .courses-text,
-  .feed-text,
-  .placeholder-text {
-    display: none;
-    position: absolute;
-    left: 5rem;
-    color: var(--text);
-    font-size: 20px;
-    padding: .1rem 1rem;
-    background: var(--bg-light);
-    border-radius: 20px;
-    border: var(--text) 1px solid;
-  }
 
-  .settings-text {
-    display: none;
-    position: absolute;
-    left: 5rem;
-    bottom: 2.7rem;
-    color: var(--text);
-    font-size: 20px;
-    padding: .1rem 1rem;
-    background: var(--bg-light);
-    border-radius: 20px;
-    border: var(--text) 1px solid;
-    font-weight: 500;
-  }
+
+  
 
   .sidebar-nav a:first-child:hover .home-text {
     display: block;
@@ -1369,6 +1397,7 @@ display: flex;
     display: block;
   }
 
+  
 
 }
 
@@ -1469,6 +1498,11 @@ display: flex;
   .fsample-book-description {
     font-size: 16px;
   }
+
+  .first-books {
+
+    padding: 0 .5rem 2rem .5rem;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -1521,75 +1555,22 @@ display: flex;
 
 @media (max-width: 1024px) {
 
-  .mobile-navbar {
-    display: flex;
-    backdrop-filter: blur(8px);
-    border-right: 2px solid var(--border);
-    border-radius: 15px 15px 0 0;
-    border: var(--text) solid 2px;
-    justify-content: center;
-    gap: 2rem;
-    padding: .9rem 0 .2rem 0;
-    align-items: center;
-    font-family: var(--mainFont);
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
-
-  .mobile-navbar a {
-    text-decoration: none;
-  }
-
-  .mnav-links p {
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--text-muted);
-
-
-  }
-
-  .mnav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .2rem;
-  }
-
-  .mnav-links img {
-    width: fit-content;
-    height: 25px;
-
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .home-text,
-  .courses-text,
-  .feed-text,
-  .placeholder-text,
-  .settings-text {
-    display: none;
-  }
+ 
 
   .main-page {
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1.5rem 0 6.5rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1.5rem 0 6.5rem;
   }
 
   .main-feed-sec {
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1.5rem 0 6.5rem;
   }
 
   .main-add-sec {
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1.5rem 0 6.5rem;
   }
 
   .user-details h1 {
@@ -1597,16 +1578,14 @@ display: flex;
   }
 
   .footer-box {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 2rem 4rem;
   }
 
   .footer-titles p {
     font-size: 14px;
   }
 
-  footer {
-    padding-bottom: 77px;
-  }
+
 
   .smTitle,
   .liTitle {
@@ -1677,23 +1656,190 @@ display: flex;
 }
 
 @media (max-width: 840px) {
+
+  .add-body {
+    background: var(--bg);
+  }
+
+  .add-courses-box {
+    padding: 0;
+  }
+
+  .addc-line {
+    margin-bottom: 2rem;
+  }
+
+  .add-head-box {
+    display: none;
+  }
+
+  .madd-head-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .madd-top-flex {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .maddcourseTop {
+    width: 60%;
+  }
+
+  .maddcourseTop .text-wrapper {
+    padding: .6rem;
+  }
+
+  .mmain-dropdowns p {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text-muted);
+  }
+
+  .mmain-dropdowns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid rgba(16, 42, 67, 0.08);
+    box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 20);
+    position: relative;
+
+
+  }
+
+  .mdropdown-flex {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+
+  .mmain-dropdowns::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    right: 0;
+    height: 5px;
+    width: 95%;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0));
+    z-index: 2;
+  }
+
+  .mmain-dropdowns:hover {
+    box-shadow:
+      0 18px 30px -16px rgba(2, 6, 23, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    transform: translateY(-2px);
+  }
+
+
+ 
+  .mobile-navbar {
+    display: flex;
+    backdrop-filter: blur(8px);
+    border-right: 2px solid var(--border);
+    border-radius: 15px 15px 0 0;
+    border: var(--text) solid 2px;
+    justify-content: center;
+    gap: 2rem;
+    padding: .9rem 0 .2rem 0;
+    align-items: center;
+    font-family: var(--mainFont);
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+     .settings-text {
+    display: none;
+    position: absolute;
+    left: 5rem;
+    bottom: 2.7rem;
+    color: var(--text);
+    font-size: 20px;
+    padding: .1rem 1rem;
+    background: var(--bg-light);
+    border-radius: 20px;
+    border: var(--text) 1px solid;
+    font-weight: 500;
+  }
+
+
+  .mobile-navbar a {
+    text-decoration: none;
+  }
+
+  .mnav-links p {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--text-muted);
+
+
+  }
+
+  .mnav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+  }
+
+  .mnav-links img {
+    width: fit-content;
+    height: 25px;
+
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .home-text,
+  .courses-text,
+  .feed-text,
+  .placeholder-text,
+  .settings-text {
+    display: none;
+  }
+
   .scv-body {
     background: #eaf2ff;
   }
 
   .main-page {
-    margin: 2rem 1rem 0 1rem;
+    margin: 0rem 0rem 0 0rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 1rem 0 1rem;
+    margin: 0rem 0rem 0 0rem;
+  }
+
+  .main-feed-sec {
+    margin: 0rem 0rem 0 0rem;
+  }
+
+  .main-add-sec {
+    margin: 0rem 0rem 0 0rem;
   }
 
   .footer-box {
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0 0rem 0rem;
   }
 
+ 
   .footer-titles {
     justify-content: center;
     flex-direction: column;
@@ -1731,6 +1877,10 @@ display: flex;
   .footer-socials {
     justify-content: center;
     gap: 0;
+  }
+
+  footer {
+    padding-bottom: 77px;
   }
 
   .socials {
@@ -2030,34 +2180,9 @@ display: flex;
 
   }
 
-  .drop-downs p {
-    font-size: 8px;
-  }
 
-  .drop-downs h4 {
-    font-size: 12px;
-  }
 
-  .addcourseTop h1 {
-    font-size: 39px;
-  }
 
-  .book-icon {
-
-    height: 130px;
-  }
-
-  .first-books {
-    padding: 0 1rem 1rem 2rem;
-  }
-
-  .cs-first-sem {
-    padding: 1rem;
-  }
-
-  .sem-title {
-    font-size: 22px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -2094,6 +2219,38 @@ display: flex;
   }
 
 
+  .sem-title {
+    margin-left: 5px;
+
+    font-size: 21px;
+  }
+
+  .cs-first-sem {
+
+    padding: 1.5rem;
+  }
+
+  .addc-line {
+    margin-bottom: 1rem;
+  }
+
+  .mmain-dropdowns {
+
+    padding: 1rem 1rem;
+  }
+
+  .book-icon {
+    height: 117px;
+  }
+
+  .img-option {
+    padding: .2rem;
+  }
+
+  .img-option img {
+    width: fit-content;
+    height: 18px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -2193,17 +2350,26 @@ display: flex;
     font-size: 16px;
   }
 
-  .content-title {
 
-    font-size: 22px;
-    padding: 0;
+
+  .mmain-dropdowns {
+
+    padding: .5rem 1rem;
   }
 
-  .fsample-book {
-    width: 135px;
+  .sem-title {
+
+    font-size: 17px;
   }
 
+  .college-title {
+    font-size: 23px;
+  }
 
+  .img-option img {
+
+    height: 16px;
+  }
 }
 
 
@@ -2338,6 +2504,20 @@ display: flex;
   .mobile-navbar {
     gap: 1.5rem;
   }
+
+  .cs-first-sem {
+    padding: 1rem 0;
+  }
+
+
+  .add-container {
+    padding: 2rem .5rem;
+  }
+
+  .img-option img {
+
+    height: 15px;
+  }
 }
 
 @media (max-width: 475px) {
@@ -2459,6 +2639,11 @@ display: flex;
   .log-hgh {
 
     font-size: 13px;
+  }
+
+  .img-option img {
+
+    height: 13px;
   }
 }
 
