@@ -79,10 +79,8 @@
   left: 5rem;
   color: var(--text);
   font-size: 20px;
-  padding: .1rem 1rem;
-  background: var(--bg-light);
-  border-radius: 20px;
-  border: var(--text) 1px solid;
+ 
+ 
 }
 
 .settings-text {
@@ -91,10 +89,6 @@
   left: 5rem;
   color: var(--text);
   font-size: 20px;
-  padding: .1rem 1rem;
-  background: var(--bg-light);
-  border-radius: 20px;
-  border: var(--text) 1px solid;
   bottom: 2.4rem;
 }
 
@@ -110,9 +104,8 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #0066cc;
-  display: flex;
-  align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
 }
 
 .sidebar-top {
@@ -1207,7 +1200,7 @@ footer {
   border: #64748B 2px solid;
 }
 
-.text-wrapper textarea {
+.text-wrapper input {
   width: 100%;
   resize: none;
   background: none;
@@ -1218,7 +1211,7 @@ footer {
 
 }
 
-.text-wrapper textarea:focus {
+.text-wrapper input:focus {
   outline: none;
 }
 
@@ -1274,7 +1267,7 @@ footer {
 
 .first-books img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
   display: block;
   box-shadow: 0px 7px 15px -10px rgba(0, 0, 0, 1);
   transition: 0.1s ease-in-out;
@@ -1335,9 +1328,6 @@ footer {
   font-size: 30px;
 }
 
-
-
-
 .cs-first-sem {
   position: relative;
   width: 100%;
@@ -1364,6 +1354,173 @@ footer {
       rgba(255, 255, 255, 0));
   z-index: 2;
 }
+
+
+/* Log */
+.log-body {
+  font-family: var(--mainFont);
+  background: url(assets/MAIN\ PAGE/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.log-container {
+    position: relative;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 44px;
+  background: #eaf2ff;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.main-log-sec {
+    margin: 4.5rem 5.5rem 0 12rem;
+}
+
+.log-container::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 17px;
+  right: 0;
+  height: 15px;
+  width: 97%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.posterimg {
+  width: fit-content;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.log-poster {
+  padding: 2rem;
+  background: #FFFFFF;
+  width: fit-content;
+  border: 1px solid var(--text);
+  border-radius: 25px;
+}
+
+.add-logtype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.add-logtype img {
+    cursor:pointer;
+}
+
+.add-logtype img:hover {
+filter: brightness(.5);
+}
+
+.log-y-stars {
+  display: flex;
+  
+  align-items: center;
+  gap: 1px;
+}
+
+.log-y-stars img {
+  width: fit-content;
+  height:   30px;
+}
+
+.first-log-column {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.log-top-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.sec-log-column {
+  width: 100%;
+  padding: 1rem;
+}
+
+.log-date1 {
+  font-weight: 700;
+  font-size: 20px;
+  background: #1e293b;
+  margin-bottom: 10px;
+  padding: 0 .5rem;
+  color: #eaf2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.log-date1:hover {
+  color: #1e293b;
+  background-color: #eaf2ff;
+}
+
+.log-set img{
+cursor: pointer;
+}
+
+.log-mid-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.log-mid-flex textarea {
+  padding: .5rem;
+  border-radius: 10px;
+  resize: none;
+  background: none;
+  border:2px solid var(--text);
+}
+
+.add-log-title {
+  font-size: 20px;
+}
+
+.add-log-review {
+  font-size: 16px;
+}
+
+.log-bot-flex img{
+  width: fit-content;
+  height: 50px;
+  cursor: pointer;
+
+}
+
+.log-bot-flex img:hover{
+  filter: brightness(.5);
+
+}
+
+.log-bot-flex {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
 
 /* mediaqueries */
 
@@ -1656,6 +1813,11 @@ footer {
 }
 
 @media (max-width: 840px) {
+
+  .first-books {
+    gap: 4px;
+    padding: 0 0rem 2rem 0rem;
+  }
 
   .add-body {
     background: var(--bg);
@@ -2244,7 +2406,7 @@ footer {
   }
 
   .img-option {
-    padding: .2rem;
+    padding: .5rem;
   }
 
   .img-option img {
