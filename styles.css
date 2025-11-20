@@ -68,6 +68,7 @@
   padding: 1.5rem 1rem;
   z-index: 200;
   box-shadow: 8px 0 30px rgba(0, 0, 0, 0.04);
+  background: #BBBBBB;
 }
 
 .home-text,
@@ -79,12 +80,12 @@
   left: 5rem;
   color: var(--text);
   font-size: 20px;
- 
- 
+
+
 }
 
 .settings-text {
-    display: none;
+  display: none;
   position: absolute;
   left: 5rem;
   color: var(--text);
@@ -392,6 +393,7 @@ hr {
   cursor: pointer;
   transition: background 0.18s ease, color 0.18s ease;
   filter: drop-shadow(1px 4px 4.3px #8190a3);
+  text-decoration: none;
 }
 
 .courses-box .add-course:hover {
@@ -1200,6 +1202,8 @@ footer {
   border: #64748B 2px solid;
 }
 
+
+
 .text-wrapper input {
   width: 100%;
   resize: none;
@@ -1357,6 +1361,11 @@ footer {
 
 
 /* Log */
+
+.mlog-container {
+  display: none;
+}
+
 .log-body {
   font-family: var(--mainFont);
   background: url(assets/MAIN\ PAGE/bg.png);
@@ -1370,18 +1379,18 @@ footer {
 
 
 .log-container {
-    position: relative;
+  position: relative;
   width: 100%;
   padding: 2rem;
   border-radius: 44px;
   background: #eaf2ff;
   display: flex;
   gap: 1rem;
-  
+
 }
 
 .main-log-sec {
-    margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 0 12rem;
 }
 
 .log-container::before {
@@ -1422,23 +1431,23 @@ footer {
 }
 
 .add-logtype img {
-    cursor:pointer;
+  cursor: pointer;
 }
 
 .add-logtype img:hover {
-filter: brightness(.5);
+  filter: brightness(.5);
 }
 
 .log-y-stars {
   display: flex;
-  
+
   align-items: center;
   gap: 1px;
 }
 
 .log-y-stars img {
   width: fit-content;
-  height:   30px;
+  height: 30px;
 }
 
 .first-log-column {
@@ -1453,6 +1462,7 @@ filter: brightness(.5);
   display: flex;
   justify-content: space-between;
 }
+
 .sec-log-column {
   width: 100%;
   padding: 1rem;
@@ -1475,8 +1485,8 @@ filter: brightness(.5);
   background-color: #eaf2ff;
 }
 
-.log-set img{
-cursor: pointer;
+.log-set img {
+  cursor: pointer;
 }
 
 .log-mid-flex {
@@ -1490,7 +1500,7 @@ cursor: pointer;
   border-radius: 10px;
   resize: none;
   background: none;
-  border:2px solid var(--text);
+  border: 2px solid var(--text);
 }
 
 .add-log-title {
@@ -1501,14 +1511,14 @@ cursor: pointer;
   font-size: 16px;
 }
 
-.log-bot-flex img{
+.log-bot-flex img {
   width: fit-content;
   height: 50px;
   cursor: pointer;
 
 }
 
-.log-bot-flex img:hover{
+.log-bot-flex img:hover {
   filter: brightness(.5);
 
 }
@@ -1519,6 +1529,361 @@ cursor: pointer;
   justify-content: flex-end;
 }
 
+/* landing page */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-body {
+  background: url(assets/MAIN\ PAGE/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+}
+
+.log-in-badge {
+  position: absolute;
+  left: -9rem;
+  bottom: -6rem;
+
+}
+
+.landing-body aside {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2.5rem 2.5rem 0 3rem;
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.website-url {
+  font-size: 24px;
+  color: #44536A;
+  margin: .5rem 0 .5rem 0;
+}
+
+.sign-in-container {
+  text-align: center;
+  top: -20px;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #dbe3f0;
+  border-radius: 30px;
+  background: #eaf2ff;
+}
+
+.sign-in-container::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 1;
+  right: 0;
+  height: 13px;
+  width: 99%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.landing-body p {
+  color: #44536A;
+  font-size: 16px;
+  margin: 5 0 5 0;
+}
+
+.landing-body h3 {
+  margin: .5rem;
+}
+
+.signin-login-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+      gap: .5rem;
+}
+
+.sign-in {
+  background-color: #6C664A;
+  border-radius: 8px;
+  color: white;
+  width: 92px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+}
+
+.log-in {
+  background-color: #396747;
+  border-radius: 8px;
+  color: white;
+  width: 92px;
+  height: 40px;
+  border: none;
+  font-size: 16px;
+}
+
+.problem-container {
+  text-align: center;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #dbe3f0;
+  border-radius: 30px;
+  background: #eaf2ff;
+}
+
+.problem-container::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 1;
+  right: 0;
+  height: 13px;
+  width: 99%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.having-problems {
+  font-size: 15px;
+}
+
+.problems-info {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.terms,
+.privacy {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.landing-body .lmain-page {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  border: 2px solid #dbe3f0;
+  border-radius: 50px;
+  background: #eaf2ff;
+  padding-bottom: 40px;
+  margin: 2rem;
+}
+
+.landing-body .lmain-page::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  right: 0;
+  height: 13px;
+  width: 95%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.column-1,
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 30px;
+}
+
+.page-container {
+  width: 80%;
+  height: fit-content;
+  position: relative;
+  padding: 1rem;
+  border: 2px solid #dbe3f0;
+  border-radius: 30px;
+  background: #eaf2ff;
+}
+
+.page-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 1;
+  right: 0;
+  height: 13px;
+  width: 99%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.homepage-img,
+.feedpage-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.introduction-container {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.paragraph {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.read-more {
+  text-align: left;
+  text-decoration: underline;
+  color: #6C664A;
+  font-size: 16px;
+}
+
+.read-more-two-container {
+  position: relative;
+  left: 1rem;
+}
+
+.read-more-container {
+  position: relative;
+  top: 10px;
+  align-self: flex-start;
+}
+
+.landing-body h1 {
+  font-size: 32px;
+}
+
+.warning-container {
+  display: flex;
+}
+
+.warning-icon {
+  margin-right: 1.5rem;
+}
+
+.warning-paragraph {
+  text-align: justify;
+  font-size: 12px;
+}
+
+.text {
+  padding: 0 2rem;
+}
+
+.UrStat-today-container {
+  position: relative;
+  width: 80%;
+  padding: 8px;
+  border: 2px solid #dbe3f0;
+  border-radius: 20px;
+  background: #eaf2ff;
+  margin-top: 2rem;
+}
+
+.UrStat-today-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 1;
+  right: 0;
+  height: 13px;
+  width: 99%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.urstat-today {
+  margin: 0;
+  font-size: 28px;
+  color: #6D5753;
+}
+
+.ur-stat-update {
+  font-size: 12px;
+  color: #05081A;
+}
+
+.UrStat-Happenings-container {
+  position: relative;
+  width: 80%;
+  padding: 6px;
+  border: 2px solid #dbe3f0;
+  border-radius: 20px;
+  background: #eaf2ff;
+  margin-top: 2rem;
+  display: flex;
+
+}
+
+.UrStat-Happenings-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 1;
+  right: 0;
+  height: 13px;
+  width: 99%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0));
+  z-index: 2;
+}
+
+.urstat-happenings {
+  font-size: 12px;
+  text-align: justify;
+  color: #05081A;
+}
+
+.paper-icon {
+  position: relative;
+  top: 2rem;
+  left: 1.5rem;
+}
+
+.terms-condition {
+  position: relative;
+  bottom: 30px;
+}
+
+.signin-login-buttons button:hover {
+  cursor: pointer;
+}
 
 
 
@@ -1532,7 +1897,7 @@ cursor: pointer;
 
 
 
-  
+
 
   .sidebar-nav a:first-child:hover .home-text {
     display: block;
@@ -1554,7 +1919,7 @@ cursor: pointer;
     display: block;
   }
 
-  
+
 
 }
 
@@ -1573,6 +1938,10 @@ cursor: pointer;
   .main-feed-sec {
     margin: 4.5rem 5.5rem 0 10rem;
   }
+
+  .main-log-sec {
+    margin: 4.5rem 5.5rem 0 10rem;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -1585,6 +1954,10 @@ cursor: pointer;
   }
 
   .main-feed-sec {
+    margin: 4.5rem 3.5rem 0 9rem;
+  }
+
+  .main-log-sec {
     margin: 4.5rem 3.5rem 0 9rem;
   }
 }
@@ -1618,6 +1991,10 @@ cursor: pointer;
   .drop-downs p {
 
     font-size: 12px;
+  }
+
+  .landing-body .lmain-page {
+    margin: 1rem;
   }
 }
 
@@ -1676,6 +2053,10 @@ cursor: pointer;
     margin: 4rem 1rem 0 7rem;
   }
 
+  .main-log-sec {
+    margin: 4rem 1rem 0 7rem;
+  }
+
   .book-details p {
     font-size: 13px;
   }
@@ -1708,11 +2089,20 @@ cursor: pointer;
   .fsample-book-description {
     font-size: 14px;
   }
+
+  .landing-body aside {
+    width: 22%;
+    margin: 2.5rem 1.5rem 0 2rem;
+  }
+
+  .signin-login-buttons {
+    gap: .5rem;
+  }
 }
 
 @media (max-width: 1024px) {
 
- 
+
 
   .main-page {
     margin: 2rem 1.5rem 0 6.5rem;
@@ -1729,6 +2119,11 @@ cursor: pointer;
   .main-add-sec {
     margin: 2rem 1.5rem 0 6.5rem;
   }
+
+  .main-log-sec {
+    margin: 2rem 1.5rem 0 6.5rem;
+  }
+
 
   .user-details h1 {
     font-size: 25px;
@@ -1809,10 +2204,65 @@ cursor: pointer;
     display: none;
   }
 
+  .landing-body {
+    flex-direction: column;
+  }
 
+  .terms-condition {
+    display: none;
+  }
+
+  .landing-body aside {
+    flex-direction: column;
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .problem-container {
+    top: 0;
+  }
+
+  .landing-body .lmain-page {
+    margin: 0rem;
+    flex-direction: column;
+  }
+
+  .landing-body {
+    flex-direction: column;
+  }
+
+  .sign-in-container {
+    position: static;
+  }
+
+  .problem-container {
+    position: static;
+  }
+
+  .landing-body {
+    background: var(--bg);
+  }
 }
 
 @media (max-width: 840px) {
+
+
+
+
+
+  .sign-in-container::before,
+  .problem-container::before {
+    display: none;
+  }
+
+  .signin-login-buttons {
+    gap: .5rem;
+    justify-content: center;
+  }
+
+  .landing-body aside {
+    flex-direction: column;
+  }
 
   .first-books {
     gap: 4px;
@@ -1904,7 +2354,7 @@ cursor: pointer;
   }
 
 
- 
+
   .mobile-navbar {
     display: flex;
     backdrop-filter: blur(8px);
@@ -1921,9 +2371,10 @@ cursor: pointer;
     width: 100%;
     bottom: 0;
     left: 0;
+    background: #BBBBBB;
   }
 
-     .settings-text {
+  .settings-text {
     display: none;
     position: absolute;
     left: 5rem;
@@ -2001,7 +2452,7 @@ cursor: pointer;
     padding: 2rem 0 0rem 0rem;
   }
 
- 
+
   .footer-titles {
     justify-content: center;
     flex-direction: column;
@@ -2342,6 +2793,116 @@ cursor: pointer;
 
   }
 
+  /* log */
+
+  .mlog-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .log-container {
+    display: none;
+  }
+
+  .log-body {
+    background: var(--bg);
+    margin-bottom: 95px;
+  }
+
+  .mlog-first-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+
+  .mlog-top-flex1 {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .completed-title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .mlog-line {
+    margin: 2rem 0;
+    color: var(--text);
+    height: 2px;
+  }
+
+
+  .main-log-sec {
+    margin: 3rem 3rem 0 3rem;
+  }
+
+  .to-log {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .to-log img {
+    width: fit-content;
+    height: 150px;
+    border-radius: 15px;
+  }
+
+  .to-log p {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .to-log-date {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .to-log-date p {
+    font-size: 23px;
+    font-weight: 700;
+
+  }
+
+  .to-log-type img {
+    width: fit-content;
+    height: 50px;
+  }
+
+  .log-review {
+    background: none;
+    border: none;
+    font-size: 22px;
+    padding: .3rem;
+  }
+
+  .to-log-rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .to-log-stars {
+    display: flex;
+    gap: .1rem;
+  }
+
+  .to-log-save {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
 
 
 
@@ -2413,9 +2974,25 @@ cursor: pointer;
     width: fit-content;
     height: 18px;
   }
+
+  /* log */
+
+
+  .mlog-container {}
+
+  .completed-title {
+    font-size: 33px;
+  }
 }
 
 @media (max-width: 680px) {
+
+  .mlog-top-flex1 {
+
+    gap: .5rem;
+
+  }
+
   .main-page {
     flex-direction: column;
 
@@ -2532,10 +3109,50 @@ cursor: pointer;
 
     height: 16px;
   }
+
+  .text {
+    padding: 0px 1rem;
+  }
+
+  .log-in-badge {
+    position: absolute;
+    left: -7rem;
+    bottom: -6rem;
+  }
+
+  .logo {
+    margin-top: 1rem;
+  }
+
+
+  .to-log-save img {
+    width: fit-content;
+    height: 77px;
+  }
 }
 
 
 @media (max-width: 590px) {
+
+  .mlog-first-flex img {
+    width: fit-content;
+    height: 28px;
+  }
+
+  .completed-title {
+    font-size: 25px;
+  }
+
+  .to-log p {
+    font-size: 30px;
+
+  }
+
+  .to-log-date p {
+    font-size: 16px;
+  }
+
+
   .sidebar-nav {
     gap: 0.2rem;
     border: 1px solid black;
@@ -2678,11 +3295,38 @@ cursor: pointer;
 
   .img-option img {
 
-    height: 15px;
+    height: 20px;
+  }
+
+  .first-books {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 2rem;
+    gap: 1rem;
+
+  }
+
+  .to-log-save img {
+    width: fit-content;
+    height: 72px;
   }
 }
 
 @media (max-width: 475px) {
+
+  .to-log-stars {
+    width: fit-content;
+    height: 35px;
+  }
+
+  .to-log-save img {
+
+    height: 60px;
+  }
+
+  .to-log-type img {
+    height: 41px;
+  }
+
   .mbook-abt h3 {
     font-size: 26px;
   }
@@ -2805,7 +3449,16 @@ cursor: pointer;
 
   .img-option img {
 
-    height: 13px;
+    height: 19px;
+  }
+
+
+  .to-log-date p {
+    font-size: 14px;
+  }
+
+  .to-log-stars {
+    height: 30px;
   }
 }
 
